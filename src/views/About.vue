@@ -7,10 +7,14 @@
 <script>
 export default {
   name: 'about',
-  data () {
+  props: ['id'],
+  data() {
     return {
       name: 'about'
     }
+  },
+  created() {
+    console.log(this.id)
   }
 }
 </script>

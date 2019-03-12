@@ -18,10 +18,10 @@ export default {
     }
   },
   computed: {
-    iconName () {
+    iconName() {
       return `#icon-${this.iconClass}`
     },
-    svgClass () {
+    svgClass() {
       if (this.className) {
         return `svg-icon ${this.className}`
       } else {
@@ -32,7 +32,8 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="stylus" scoped>
+  currentColor = '#f6a'
   .svg-icon {
     width: 1em;
     height: 1em;

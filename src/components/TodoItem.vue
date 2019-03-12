@@ -1,13 +1,21 @@
 <template>
-  <li>{{}}</li>
+  <li class="todo__item">{{todo}}</li>
 </template>
 
 <script>
 export default {
-  name: 'TodoItem'
+  name: 'TodoItem',
+  props: {
+    todo: {
+      type: String,
+      default: ''
+    }
+  },
+  methods: {}
 }
 </script>
 
-<style scoped>
-
+<style lang="stylus" scoped>
+.todo__item
+  color: #f6a
 </style>
