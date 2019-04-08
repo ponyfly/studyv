@@ -12,16 +12,21 @@
   import { mapState, mapActions } from 'vuex'
   export default {
     name: 'ProductList',
-    computed: mapState({
-      products: state => state.product.all
+    computed: mapState('product', {
+      products: state => state.all
     }),
     methods: {
       ...mapActions('cart', [
         'addProductToCart'
+      ]),
+      ...mapActions('product', [
+        'getAllProducts'
       ])
     },
     created() {
-      this.$store.dispatch('product/getAllProducts')
+      // this.$store.dispatch('product/getAllProducts')
+      this.getAllProducts()
+      this.$store.dispatch('product/testAction')
     }
   }
 </script>

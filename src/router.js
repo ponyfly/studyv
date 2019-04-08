@@ -3,20 +3,21 @@ import Router from 'vue-router'
 import Home from './views/Home.vue'
 
 // lazy-load component
-const About = () => import(/* webpackChunkName: 'about' */ './views/About.vue')
-const Events = () => import(/* webpackChunkName: 'about' */ './views/Events.vue')
-const FormSu = () => import(/* webpackChunkName: 'about' */ './views/FormSu.vue')
-const ComponentS = () => import(/* webpackChunkName: 'about' */ './views/ComponentS.vue')
-const ComponentD = () => import(/* webpackChunkName: 'about' */ './views/ComponentD.vue')
-const ComponentSlot = () => import(/* webpackChunkName: 'about' */ './views/ComponentSlot.vue')
-const ComponentBorder = () => import(/* webpackChunkName: 'about' */ './views/ComponentBorder.vue')
-const ComponentTransition = () => import(/* webpackChunkName: 'about' */ './views/ComponentTransition.vue')
-const ComponentMixin = () => import(/* webpackChunkName: 'about' */ './views/ComponentMixin.vue')
-const RouterCom = () => import(/* webpackChunkName: 'about' */ './views/RouterCom.vue')
-const RouterComDetail = () => import(/* webpackChunkName: 'about' */ './views/RouterComDetail.vue')
-const ComponentFetch = () => import(/* webpackChunkName: 'about' */ './views/ComponentFetch.vue')
-const ComponentFetch1 = () => import(/* webpackChunkName: 'about' */ './views/ComponentFetch1.vue')
-const ComponentCart = () => import(/* webpackChunkName: 'about' */ './views/ComponentCart.vue')
+const About = () => import(/* webpackChunkName: 'About' */ './views/About.vue')
+const Events = () => import(/* webpackChunkName: 'Events' */ './views/Events.vue')
+const FormSu = () => import(/* webpackChunkName: 'FormSu' */ './views/FormSu.vue')
+const ComponentS = () => import(/* webpackChunkName: 'ComponentS' */ './views/ComponentS.vue')
+const ComponentD = () => import(/* webpackChunkName: 'ComponentD' */ './views/ComponentD.vue')
+const ComponentSlot = () => import(/* webpackChunkName: 'ComponentSlot' */ './views/ComponentSlot.vue')
+const ComponentBorder = () => import(/* webpackChunkName: 'ComponentBorder' */ './views/ComponentBorder.vue')
+const ComponentTransition = () => import(/* webpackChunkName: 'ComponentTransition' */ './views/ComponentTransition.vue')
+const ComponentMixin = () => import(/* webpackChunkName: 'ComponentMixin' */ './views/ComponentMixin.vue')
+const RouterCom = () => import(/* webpackChunkName: 'RouterCom' */ './views/RouterCom.vue')
+const RouterComDetail = () => import(/* webpackChunkName: 'RouterComDetail' */ './views/RouterComDetail.vue')
+const ComponentFetch = () => import(/* webpackChunkName: 'ComponentFetch' */ './views/ComponentFetch.vue')
+const ComponentFetch1 = () => import(/* webpackChunkName: 'ComponentFetch1' */ './views/ComponentFetch1.vue')
+const ComponentCart = () => import(/* webpackChunkName: 'ComponentCart' */ './views/ComponentCart.vue')
+const Ele = () => import(/* webpackChunkName: 'Ele' */ './views/Ele.vue')
 
 Vue.use(Router)
 
@@ -132,6 +133,15 @@ const routes = [
     }
   },
   {
+    path: '/Ele',
+    name: 'Ele',
+    component: Ele,
+    props: true,
+    meta: {
+      keepAlive: true
+    }
+  },
+  {
     path: '/RouterCom/:id',
     name: 'RouterCom',
     component: RouterCom,
@@ -166,7 +176,7 @@ router.beforeEach(function(to, from, next) {
 })
 
 router.beforeResolve(function(to, from, next) {
-  console.log('beforeResolve')
+  console.log('beforeResolve', to)
   next()
 })
 router.afterEach(function(to, from) {

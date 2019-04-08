@@ -53,6 +53,7 @@ export default {
     }
   },
   created() {
+    console.log(this.id)
   },
   watch: {
     watchData: {
@@ -60,7 +61,7 @@ export default {
         console.log(newVal, oldVal)
       },
       deep: true,
-      immediate: false
+      immediate: true
     }
   }
 }

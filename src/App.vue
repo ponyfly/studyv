@@ -19,6 +19,7 @@
       <router-link to="/ComponentFetch">ComponentFetch</router-link> |
       <router-link to="/ComponentFetch1/6">ComponentFetch1</router-link> |
       <router-link to="/ComponentCart">ComponentCart</router-link> |
+      <router-link to="/Ele">Ele</router-link> |
     </div>
     <keep-alive>
       <router-view v-if="$route.meta.keepAlive" />
@@ -39,7 +40,10 @@
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
     color: #2c3e50;
-    font-size 16px
+    font-size 16px;
+    height:100%;
+    display flex;
+    flex-direction column
   }
   #nav {
     padding: 30px;

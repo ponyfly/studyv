@@ -5,6 +5,7 @@ import store from './store/index'
 import { currency } from './utils/currency'
 
 import './components/base/index'
+import './plugins/element'
 
 Vue.config.productionTip = false
 Vue.filter('currency', currency)

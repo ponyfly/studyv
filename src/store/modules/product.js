@@ -13,6 +13,9 @@ const actions = {
     shop.getProducts(products => {
       commit('setProducts', products)
     })
+  },
+  testAction(contenxt) {
+    console.log(contenxt)
   }
 }
 
@@ -21,6 +24,7 @@ const mutations = {
     state.all = products
   },
   decrementProductInventory(state, { id }) {
+    console.log(arguments)
     const pro = state.all.find(pro => pro.id === id)
     pro.inventory--
   }
