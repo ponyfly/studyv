@@ -72,6 +72,8 @@
       trim:<input type="text" v-model.trim="msg3">
       <div>toggle 值为 {{msg3}}</div>
     </div>
+
+    <base-radio></base-radio>
   </div>
 </template>
 

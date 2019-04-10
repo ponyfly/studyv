@@ -1,6 +1,6 @@
 <template>
   <a>
-    <slot>{{url}}</slot>
+    <slot></slot>
   </a>
 </template>
 

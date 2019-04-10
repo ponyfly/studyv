@@ -9,16 +9,27 @@
       <div @click="exec" data-a="stopInner">inner</div>
     </div>
     <todo-list></todo-list>
+    <!--<lg-mask :visible="visible"></lg-mask>-->
+    <!--<lg-mask :visible.sync="visible"></lg-mask>-->
+    <!--<lg-mask></lg-mask>-->
+    <lg-mask v-model="visible" class="test" data-a="testa"></lg-mask>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
 import TodoList from '@/components/TodoList.vue'
+import LgMask from '@/components/LgMask.vue'
 
 export default {
   name: 'home',
   props: ['id'],
+  // provide() {
+  //   return {
+  //     visible: true,
+  //     closeMask: this.closeMask
+  //   }
+  // },
   data() {
     return {
       name: 'home',
@@ -27,11 +38,13 @@ export default {
         name: '张三',
         age: 16
       },
-      list: [1, 2, 3, 4, 5]
+      list: [1, 2, 3, 4, 5],
+      visible: true
     }
   },
   components: {
-    TodoList
+    TodoList,
+    LgMask
   },
   methods: {
     exec(e) {
@@ -51,6 +64,9 @@ export default {
           console.log('未定义指令')
       }
     }
+    // closeMask() {
+    //   this._provided.visible = false
+    // }
   },
   created() {
     console.log(this.id)

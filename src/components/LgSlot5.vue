@@ -2,7 +2,7 @@
   <ul>
     <li v-for="todo in todos" :key="todo.id">
       <slot :todo="todo"></slot>
-      <slot name="todo" :todo="todo"></slot>
+      <slot name="todo" :todo="todo">123fdsf</slot>
     </li>
   </ul>
 </template>

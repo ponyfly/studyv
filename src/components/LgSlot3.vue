@@ -8,11 +8,11 @@
     <main>
       <slot></slot>
     </main>
-    <header>
+    <footer>
       <slot name="footer">
         default footer
       </slot>
-    </header>
+    </footer>
   </div>
 </template>
 
